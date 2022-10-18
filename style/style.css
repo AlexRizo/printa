@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     outline: 0;
@@ -6,16 +6,21 @@
     font-family: 'Red Hat Display', sans-serif;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     overflow-x: hidden;
- }
+}
 
 a {
     text-decoration: none;
-    color: white;
+    color: inherit;
 }
 
 .header {
+    z-index: 10;
     position: fixed;
 }
 
@@ -32,11 +37,11 @@ a {
 }
 
 .menu {
- padding: 50px 100px;
- display: inline-flex;
- flex-direction: row;
- width: 100vw;
- justify-content: space-between;
+    padding: 50px 100px;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
 }
 
 .printa-logo {
@@ -75,7 +80,7 @@ a {
     background-position: center center;
 }
 
-.background-black{
+.background-black {
     background: rgba(0, 0, 0, 0.68);
     width: inherit;
     height: inherit;
@@ -119,7 +124,7 @@ a {
 
 .section-2 {
     width: 100vw;
-    background: #F2F2F2;
+    background: #fafafa;
     padding: 20px 0 124px 0;
 }
 
@@ -132,8 +137,10 @@ a {
 
 .container-section-2 {
     display: flex;
-    margin: 0 90px 0 180px;
+    padding: 0 40px 0 140px;
+    max-width: 1920px;
     justify-content: space-around;
+    margin: auto;
 }
 
 .info {
@@ -162,43 +169,159 @@ a {
 
 .object {
     position: absolute;
-    z-index: 10;
+    z-index: 1;
     margin-top: 610px;
 }
 
 .section-3 {
-
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .p-container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    width: 1632px;
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    
 }
 
 .t-services { 
-margin-top: 40px;
+    margin-top: 40px;
 }
 
 .papeleria-corporativa, .papeleria-publicitaria, 
 .papeleria-administrativa, .papeleria-social {
     width: 408px;
     height: 408px;
+    font-size: 33px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .papeleria-corporativa {
-    background: pink;
+    background: #E5117C;
+    grid-column: 2;
 }
 
 .papeleria-publicitaria {
     background: black;
-    color: white;
+    grid-column: 4;
 }
 
 .papeleria-administrativa {
-    background: skyblue;
+    background: #05B0E6;
+    grid-row: 2;
 }
 
 .papeleria-social {
-    background: yellow;
+    background: #FDC71F;
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.pap-corp, .pap-pub,
+.pap-adm, .pap-soc, .pap-description{
+    margin: 20px 0;
+}
+
+
+.p-pap-corp, .p-pap-pub,
+.p-pap-adm, .p-pap-soc {
+    line-height: 1.2;
+}
+
+.pap-description {
+    font-size: 29;
+    font-weight: 400;
+    color: black;
+    width: 260px;
+}
+
+.btn {
+    position: absolute;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.674);
+    margin-top: 361px;
+    margin-right: 361px;
+    width: 47px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-pap-corp, .btn-pap-pub,
+.btn-pap-adm, .btn-pap-soc {
+    /*  */
+}
+
+.section-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentta {
+    max-width: 1920;
+}
+
+.t-experience {
+    margin: 120px 0 90px 0
+}
+
+/* <!-------- FILLS --------¡> */
+.icon-fill{
+    fill: #fff;
+}
+
+.toggle-bg-gray {
+    background: #F2F2F2;
+}
+
+.toggle-txt-color-black {
+    color: black;
+}
+
+/* <!-------- TRANSITIONS --------¡> */
+
+.transition-black {
+    transition: 0.2s;
+    fill: #000;
+}
+
+.transition-white {
+    transition: 0.2s;
+    fill: #fff;
+}
+
+/* <!-------- PLUGINS --------¡> */
+
+.mySwiper {
+    max-width: 1632px;
+}
+
+.swiper-wrapper {
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #c8c8c8 !important;
+}
+
+.swiper-button-next {
+    margin-left: 50px;
 }
