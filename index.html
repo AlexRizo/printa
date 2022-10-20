@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d9eee5c7f7.js" crossorigin="anonymous"></script>
     <title>Printa</title>
 </head>
 <body>
@@ -43,10 +43,19 @@
                 <span class="experience"><a href="#experiencia">Experiencia</a></span>
                 <span class="contact"><a href="#contacto">Contacto</a></span>
             </div>
+            <div class="btn-menu" onclick="openMenu()" onscroll="closeMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27.691" height="22.006" viewBox="0 0 27.691 22.006">
+                    <g id="Grupo_6" data-name="Grupo 6" transform="translate(-345.443 -23.873)">
+                      <path class="stroke" id="Trazado_9" data-name="Trazado 9" d="M345.443,24.873h27.691" transform="translate(0)" fill="none" stroke-width="2"/>
+                      <path class="stroke" id="Trazado_10" data-name="Trazado 10" d="M345.443,24.873h27.691" transform="translate(0 10.003)" fill="none" stroke-width="2"/>
+                      <path class="stroke" id="Trazado_11" data-name="Trazado 11" d="M345.443,24.873h27.691" transform="translate(0 20.006)" fill="none" stroke-width="2"/>
+                    </g>
+                </svg>                  
+            </div>
         </nav>
+        <a class="whatsapp" href="https://wa.me/+523121114098" target="_blank"></a>
     </header>
 
-    <a class="whatsapp" href="https://wa.me/+523121114098" target="_blank"></a>
 
     <main>
         <section class="section-1">
@@ -112,9 +121,9 @@
             <div class="title t-services">Servicios</div>
             <div class="p-container">
                 <div class="papeleria-corporativa">
-                    <img class="pap-corp" src="./assets/icons/papeleria_corporativa.png" alt="papeleria_corporativa" width="185.75">
+                    <div class="pap-corp"></div>
                     <p class="p-pap-corp">Papelería <br>corporativa</p>
-                    <p hidden class="pap-description pap-desc-corp">Tarjetas, membretes, folders, sobres, etc.</p>
+                    <p hidden class="pap-description pap-desc-corp">Tarjetas,<br> membretes,<br> folders, sobres,<br> etc.</p>
                     <div class="btn btn-pap-corp" onclick="openPapeleria('corporativa')">
                         <svg xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
                             <g id="Grupo_95" data-name="Grupo 95" transform="translate(0 0)">
@@ -128,7 +137,7 @@
                 </div>
 
                 <div class="papeleria-publicitaria">
-                    <img class="pap-pub" src="./assets/icons/papeleria_publicitaria.png" alt="papeleria_corporativa" width="109.08">
+                    <div class="pap-pub"></div>
                     <p class="p-pap-pub">Papelería <br>publicitaria</p>
                     <p hidden class="pap-description pap-desc-pub">Volantes, <br>folletos, <br>carteles, <br>menús, <br>etc.</p>
                     <div class="btn btn-pap-pub" onclick="openPapeleria('publicitaria')">                        
@@ -144,9 +153,9 @@
                 </div>
 
                 <div class="papeleria-administrativa">
-                    <img class="pap-adm" src="./assets/icons/papeleria_administrativa.png" alt="papeleria_corporativa" width="117.54">
+                    <div class="pap-adm"></div>
                     <p class="p-pap-adm">Papelería <br>administrativa</p>
-                    <p hidden class="pap-description pap-desc-adm">Notas, recetarios, bitácoras, enmicados, etc.</p>
+                    <p hidden class="pap-description pap-desc-adm">Notas, recetarios, bitácoras,<br> enmicados, etc.</p>
                     <div class="btn btn-pap-adm" onclick="openPapeleria('administrativa')">
                         <svg xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
                             <g id="Grupo_95" data-name="Grupo 95" transform="translate(0 0)">
@@ -160,9 +169,9 @@
                 </div>
 
                 <div class="papeleria-social">
-                    <img class="pap-soc" src="./assets/icons/papeleria_social.png" alt="papeleria_corporativa" width="119.55">
+                    <div class="pap-soc"></div>
                     <p class="p-pap-soc">Papelería <br>social</p>
-                    <p hidden class="pap-description pap-desc-soc">Invitaciones, suajes,<br> etiquetas, postales, etc.</p>
+                    <p hidden class="pap-description pap-desc-soc">Invitaciones,<br> suajes,<br> etiquetas,<br> postales, etc.</p>
                     <div class="btn btn-pap-soc" onclick="openPapeleria('social')">
                         <svg xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
                             <g id="Grupo_95" data-name="Grupo 95" transform="translate(0 0)">
@@ -200,11 +209,9 @@
 
         <section id="contacto" class="section-5">
             <div class="container-section-5">
-                <div>
+                <div class="contact-map-section">
                     <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.810938911793!2d-103.71225944841831!3d19.250681786924066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84255abcb89fbfd3%3A0xe1a663692637df71!2sFelipe%20Sevilla%20del%20R%C3%ADo%20512%2C%20Lomas%20de%20Circunvalaci%C3%B3n%2C%2028010%20Colima%2C%20Col.!5e0!3m2!1ses-419!2smx!4v1666199461627!5m2!1ses-419!2smx"
-                    width="822"
-                    height="699"
                     style="border:0;"
                     allowfullscreen=""
                     loading="lazy"
@@ -218,8 +225,8 @@
                             <ul class="contact-list">
                                 <li class="li-tel"><img src="./assets/icons/vineta-azul.png" alt="*" height="20px"> Teléfono: <a href="tel:3123134567"> 312 313 4567</a></li>
                                 <li class="li-whatsapp"><img src="./assets/icons/vineta-rosa.png" alt="*" height="20px"> WhatsApp: <a href="https://wa.me/+523121114098" target="_blank"> 312 111 4098</a></li>
-                                <li class="li-mail"><img src="./assets/icons/vineta-amarilla.png" alt="*" height="20px"> Correo Electrónico: <a href="mailto:ventas@printafast.com"> ventas@printafast.com</a></li>
-                                <li class="li-address"><img src="./assets/icons/vineta-negra.png" alt="*" height="20px"> Domicilio: Felipe Sevilla del Río 512-B, Colonia Lomas<br>
+                                <li class="li-mail"><img src="./assets/icons/vineta-amarilla.png" alt="*" height="20px"><p> Correo Electrónico:</p> <a href="mailto:ventas@printafast.com"> ventas@printafast.com</a></li>
+                                <li class="li-address"><img src="./assets/icons/vineta-negra.png" alt="*" height="20px"> Domicilio: Felipe Sevilla del Río 512-B, Colonia Lomas<br class="br">
                                                                                                                          de Circunvalación, C.P. 28010, Colima, México.</li>
                             </ul>
                         </div>

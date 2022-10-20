@@ -1,4 +1,6 @@
 // Referencias HTML;
+const btnMenu = document.querySelectorAll('.stroke');
+
 const papCorpTitle = document.querySelector('.p-pap-corp');
 const papPubTitle = document.querySelector('.p-pap-pub');
 const papAdmTitle = document.querySelector('.p-pap-adm');
@@ -70,10 +72,13 @@ const papTitles = {
 
 window.onscroll = () => {
     const y = window.scrollY;
+    closeMenu();
 
     if (y < 1080) {
         menu.style.transition = '0.2s';
         menu.style.color = 'white';
+        removeClasses(btnMenu, 'transition-stroke-black')
+        addClasses(btnMenu, 'transition-stroke-white')
         addClasses(iconElements, 'transition-white');
     }
     
@@ -81,7 +86,10 @@ window.onscroll = () => {
         menu.style.transition = '0.2s';
         menu.style.color = 'black';
         removeClasses(iconElements, 'transition-white')
+        removeClasses(btnMenu, 'transition-stroke-white')
         addClasses(iconElements, 'transition-black');
+        addClasses(btnMenu, 'transition-stroke-black')
+
 
     }
 
@@ -135,10 +143,16 @@ const openPapeleria = (papeleria) => {
     }
 }
 
+const openMenu = () => {
+    menu.classList.toggle('menu-transition')
+}
+
+const closeMenu = () => {
+    menu.classList.remove('menu-transition');
+} 
+
 // SWIPERJS ;
 const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
-    spaceBetween: 5,
     slidesPerGroup: 1,
     grabCursor: 'true',
     loop: true,
@@ -152,16 +166,19 @@ const swiper = new Swiper(".mySwiper", {
     breakpoints: {
         // when window width is >= 320px
         320: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 5
         },
-        // when window width is >= 480px
-        480: {
-          slidesPerView: 3,
-          spaceBetween: 5
+        1000: {
+            slidesPerView: 3,
+            spaceBetween: 5
         },
-        // when window width is >= 640px
-        1800: {
+        1300: {
+            slidesPerView: 4,
+            spaceBetween: 5
+          },
+        // when window width is >= ???px
+        1900: {
           slidesPerView: 5,
           spaceBetween: 5
         }

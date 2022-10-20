@@ -23,17 +23,27 @@ li img {
     margin-right: 13px;
 }
 
+iframe {
+    width: 100%;
+    height: 699px
+}
+
 .header {
     z-index: 10;
     position: fixed;
+}
+
+.btn-menu {
+    display: none;
+    cursor: pointer;
 }
 
 .whatsapp {
     position: fixed;
     width: 98px;
     height: 100px;
-    margin: 0 0 20px 20px;
-    bottom: 0;
+    bottom: 25px;
+    left: 25px;
     z-index: 999;
     background: url(../assets/icons/WhatsApp_icon.png) no-repeat;
     background-size: cover;
@@ -64,8 +74,9 @@ li img {
 .underline {
     margin-top: 2px;
     height: 3px;
-    width: 28%;
+    width: 2.3%;
     background: #4FADE1;
+    position: absolute;
 }
 
 .us, .services, .experience, .contact {
@@ -145,6 +156,7 @@ li img {
 
 .info {
     width: 622px;
+    height: 692px;
     font-size: 20px;
     word-spacing: 4px;
 }
@@ -258,9 +270,35 @@ li img {
     align-items: center;
 }
 
-.btn-pap-corp, .btn-pap-pub,
-.btn-pap-adm, .btn-pap-soc {
-    /*  */
+.pap-corp {
+    width: 185.75px;
+    height: 151.37px;
+    background: url(../assets/icons/papeleria_corporativa.png);
+}
+
+.pap-pub {
+    width: 109.08px;
+    height: 147.4px;
+    background: url(../assets/icons/papeleria_publicitaria.png);
+}
+
+.pap-adm {
+    width: 117.54px;
+    height: 146.24px;
+    background: url(../assets/icons/papeleria_administrativa.png);
+}
+
+.pap-soc {
+    width: 119.55px;
+    height: 129.49px;
+    background: url(../assets/icons/papeleria_social.png);
+}
+
+.pap-corp, .pap-pub,
+.pap-adm, .pap-soc {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .section-4 {
@@ -289,11 +327,17 @@ li img {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    max-width: 1644px;
+    margin: auto;
+}
+
+.contact-map-section,
+.contact-data-section {
+    width: 50%;
 }
 
 .contact-data-section {
     font-weight: bold;
-    width: 822px;
     height: 699px;
     display: flex;
     background: #F2F2F2;
@@ -399,13 +443,16 @@ li img {
     padding: 20px 0;
 }
 
+.stroke {
+    stroke: white;
+}
 /* <!-------- FILLS --------¡> */
 .icon-fill{
     fill: #fff;
 }
 
 .toggle-bg-gray {
-    background: #F2F2F2;
+    background: #F2F2F2 !important;
 }
 
 .toggle-txt-color-black {
@@ -424,6 +471,21 @@ li img {
     fill: #fff;
 }
 
+.transition-stroke-white {
+    transition: 0.2s;
+    stroke: white;
+}
+
+.transition-stroke-black {
+    transition: 0.2s;
+    stroke: black;
+}
+
+.menu-transition {
+    transition: 0.4s;
+    right: 0 !important;
+}
+
 /* <!-------- SWIPERJS --------¡> */
 
 .mySwiper {
@@ -440,6 +502,7 @@ li img {
     color: #c8c8c8 !important;
     top: initial !important;
     position: initial !important;
+    z-index: 5 !important;
 }
 
 .swiper-slide {
@@ -458,10 +521,9 @@ li img {
     align-items: center;
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1900px) {
     .menu {
         padding: 50px 50px;
-        width: 100vw;
     }
 
     .whatsapp {
@@ -471,8 +533,6 @@ li img {
 
     .menu-list {
         font-size: 16px;
-        font-weight: 400;
-        text-transform: uppercase;
         letter-spacing: 6px;
     }
 
@@ -485,9 +545,6 @@ li img {
     }
 
     .section-1-title div div {
-        display: inline;
-        color: #05B0E6;
-        font-weight: 700;
         margin: 0 25px;
     }
 
@@ -519,11 +576,32 @@ li img {
 
     .pap-corp, .pap-pub,
     .pap-adm, .pap-soc, .pap-description{
-        margin: 10px 0;
+        margin: 0 0 20px 0;
+    }
+
+    .pap-corp {
+        width: calc(185.75px - 50px);
+        height: calc(151.37px - 50px);
+    }
+    
+    .pap-pub {
+        width: calc(109.08px - 40px);
+        height: calc(147.4px - 40px);
+    }
+    
+    .pap-adm {
+        width: calc(117.54px - 40px);
+        height: calc(146.24px - 40px);
+    }
+    
+    .pap-soc {
+        width: calc(119.55px - 40px);
+        height: calc(129.49px - 40px);
     }
 
     .pap-description {
         font-size: 24px;
+        width: 70%;
     }
     
     .btn {
@@ -531,5 +609,393 @@ li img {
         margin-right: 271px;
         width: 37px;
         height: 37px;
+    }
+
+    .container-section-4, 
+    .container-section-5,
+    .container-section-6 {
+        max-width: 1232px;
+    }
+
+
+    .contact-data-section {
+        height: calc(699px - 150px);
+    }
+
+    iframe {
+        height: 549px
+    }
+
+    .footer-menu ul{
+        font-size: 16px;
+        letter-spacing: 6px;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .menu {
+        padding: 25px 25px;
+    }
+
+    .menu-list {
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+
+    .us, .services, .experience, .contact {
+        margin: 0 15px;
+    }
+
+    .info {
+        width: calc(622px - 200px);
+        font-size: 16px;
+        word-spacing: 3px;
+    }
+
+    .p1, .p2, .p3, .p4 {
+        margin: 15px 0;
+        line-height: 1.7;
+    }
+
+    .p2 {
+        font-size: 27px;
+    }
+
+    .img {
+        width: calc(696px - 200px);
+        height: calc(696px - 200px);
+    }
+
+    .p-container {
+        width: 1032px;
+    }
+
+    .papeleria-corporativa, .papeleria-publicitaria, 
+    .papeleria-administrativa, .papeleria-social {
+        width: 258px;
+        height: 258px;
+        font-size: 19px;
+    }
+
+    .pap-corp, .pap-pub,
+    .pap-adm, .pap-soc, .pap-description{
+        margin: 0 0 10px 0;
+    }
+
+    .pap-corp {
+        width: calc(185.75px - 70px);
+        height: calc(151.37px - 70px);
+    }
+    
+    .pap-pub {
+        width: calc(109.08px - 60px);
+        height: calc(147.4px - 60px);
+    }
+    
+    .pap-adm {
+        width: calc(117.54px - 60px);
+        height: calc(146.24px - 60px);
+    }
+    
+    .pap-soc {
+        width: calc(119.55px - 60px);
+        height: calc(129.49px - 60px);
+    }
+
+    .pap-description {
+        font-size: 19px;
+    }
+    
+    .btn {
+        margin-top: 220px;
+        margin-right: 221px;
+        width: 37px;
+        height: 37px;
+    }
+
+    .container-section-4, 
+    .container-section-5,
+    .container-section-6 {
+        max-width: 1032px;
+    }
+
+    .t-contact {
+        font-size: 40px;
+        margin-bottom: 70px;
+    }
+    
+    .contact-list {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    .li-tel {
+        margin: 25px 0;
+    }
+    
+    .li-whatsapp {
+        margin: 25px 0;
+    }
+    
+    .li-mail {
+        margin: 25px 0;
+    }
+    
+    .li-address {
+        margin: 25px 0 0 0;
+    }
+
+    iframe {
+        height: 549px
+    }
+
+    .footer-menu ul{
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .menu {
+        padding: initial;
+    }
+
+    .printa-logo { 
+        padding: 10px 0 0 20px;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .btn-menu {
+        position: absolute;
+        display: initial;
+        right: 40px;
+        top: 65px;
+    }
+    
+    .menu-list {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.865);
+        flex-direction: column;
+        width: 50%;
+        font-size: 14px;
+        letter-spacing: 5px;
+        z-index: 10;
+        transition: 1s;
+        top: 0;
+        right: -100%;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 8px;
+        align-items: flex-end;
+        padding: 40px 0;
+        color: white !important;
+    }
+
+    .underline {
+        display: none;
+    }
+
+    .us, .services, .experience, .contact {
+        margin: 30px 30px;
+    }
+
+    .section-1-title {
+        text-align: center;
+    }
+
+    .section-1-title div div {
+        display: block;
+    }
+
+    .container-section-2 {
+        flex-direction: column;
+        padding: initial;
+        align-items: center;
+    }
+
+    .info {
+        width: calc(622px - 200px);
+        height: initial;
+        font-size: 15px;
+        word-spacing: initial;
+    }
+
+    .p1, .p2, .p3, .p4 {
+        margin: 15px 0;
+        line-height: 1.7;
+    }
+
+    .p2 {
+        font-size: 17px;
+    }
+
+    .img {
+        width: 422px;
+        height: 422px;
+    }
+
+    .p-container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .papeleria-corporativa, .papeleria-publicitaria, 
+    .papeleria-administrativa, .papeleria-social {
+        width: 442px;
+        height: 442px;
+        font-size: 27px;
+    }
+
+    .pap-corp, .pap-pub,
+    .pap-adm, .pap-soc, .pap-description{
+        margin: 0 0 10px 0;
+    }
+
+    .pap-corp {
+        width: 144.9px;
+        height: 118.09px;
+    }
+    
+    .pap-pub {
+        width: 87.43px;
+        height: 118.14px;
+    }
+    
+    .pap-adm {
+        width: 90.2px;
+        height: 112.22px;
+    }
+    
+    .pap-soc {
+        width: 91.48px;
+        height: 99.08px;
+    }
+
+    .papeleria-corporativa {
+        background: #05B0E6;
+        order: 1;
+    }
+    
+    .papeleria-publicitaria {
+        background: black;
+        order: 4;
+    }
+    
+    .papeleria-administrativa {
+        background: #FDC71F;
+        order: 3;
+    }
+    
+    .papeleria-social {
+        background: #E5117C;
+        order: 2;
+    }
+
+    .pap-description {
+        font-size: 27px;
+    }
+    
+    .btn {
+        margin-top: 404px;
+        margin-right: 405px;
+        width: 37px;
+        height: 37px;
+    }
+
+    .container-section-4, 
+    .container-section-5,
+    .container-section-6 {
+        max-width: 442px;
+    }
+
+    .container-section-5 {
+        flex-direction: column;
+    }
+
+    .contact-data-section,
+    .contact-map-section {
+        width: 100%;
+    }
+
+    .contact-data-section {
+        height: 450px;
+        order: 1;
+    }
+
+    .contact-map-section {
+        order: 2;
+    }
+
+    .contact-data {
+        width: 80%;
+        margin-top: 0;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .t-contact {
+        display: none;
+    }
+    
+    .contact-list {
+        font-size: 15px;
+        margin-top: 0;
+    }
+    
+    .li-tel {
+        margin: 40px 0;
+    }
+    
+    .li-whatsapp {
+        margin: 40px 0;
+    }
+    
+    .li-mail {
+        margin: 40px 0 30px 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        
+    .li-mail img {
+        position: absolute;
+    }
+
+    .li-mail a, p {
+        margin-left: 32px;
+    }
+    
+    .li-address {
+        margin: 30px 0 0 0;
+        line-height: 2;
+    }
+
+    .li-address img {
+        margin-top: 5px;
+    }
+
+    .br {
+        display: none;
+    }
+    
+    iframe {
+        height: 349px
+    }
+
+    .container-section-6 {
+        flex-direction: column;
+    }
+
+    .facebook, .instagram {
+        width: 100%;
+    }
+
+    .footer-menu {
+        display: none;
     }
 }
