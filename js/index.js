@@ -134,3 +134,36 @@ const openPapeleria = (papeleria) => {
         break;
     }
 }
+
+// SWIPERJS ;
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 5,
+    slidesPerGroup: 1,
+    grabCursor: 'true',
+    loop: true,
+    centerSlider: 'true',
+    fade: 'true',
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 5
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 5
+        },
+        // when window width is >= 640px
+        1800: {
+          slidesPerView: 5,
+          spaceBetween: 5
+        }
+      }
+});
