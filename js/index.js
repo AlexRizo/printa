@@ -1,5 +1,4 @@
 // Referencias HTML;
-
 const papCorpTitle = document.querySelector('.p-pap-corp');
 const papPubTitle = document.querySelector('.p-pap-pub');
 const papAdmTitle = document.querySelector('.p-pap-adm');
@@ -21,7 +20,8 @@ const papPubDesc = document.querySelector('.pap-desc-pub');
 const papAdmDesc = document.querySelector('.pap-desc-adm');
 const papSocDesc = document.querySelector('.pap-desc-soc');
 
-const menu = document.getElementById('header');
+const head = document.getElementById('header');
+const menu = document.getElementById('menu');
 
 const papIcons = {
     papCor,
@@ -54,15 +54,15 @@ const papTitles = {
 window.onscroll = () => {
     const y = window.scrollY;
     closeMenu();
-    console.log(y);
 
     if (y < 100) {
-        menu.classList.remove('menu-background-transition');
+        head.classList.remove('menu-background-transition');
     }
     
     if (y >= 100) {
-        menu.classList.add('menu-background-transition');
+        head.classList.add('menu-background-transition');
     }
+
 };
 
 const addClasses = (elements, className) => {
@@ -80,7 +80,6 @@ const removeClasses = (elements, className) => {
 const openPapeleria = (papeleria) => {
     switch (papeleria) {
         case 'corporativa':
-            console.log('papeleria corporativa');
             papIcons.papCor.toggleAttribute('hidden');
             papDescriptions.papCorDesc.toggleAttribute('hidden');
             papTitles.papCorpTitle.classList.toggle('toggle-txt-color-black');
@@ -88,7 +87,6 @@ const openPapeleria = (papeleria) => {
         break;
 
         case 'publicitaria':
-            console.log('papeleria publicitaria');
             papIcons.papPub.toggleAttribute('hidden')
             papDescriptions.papPubDesc.toggleAttribute('hidden');
             papTitles.papPubTitle.classList.toggle('toggle-txt-color-black');
@@ -96,7 +94,6 @@ const openPapeleria = (papeleria) => {
         break;
 
         case 'administrativa':
-            console.log('papeleria administrativa');
             papIcons.papAdm.toggleAttribute('hidden')
             papDescriptions.papAdmDesc.toggleAttribute('hidden');
             papTitles.papAdmTitle.classList.toggle('toggle-txt-color-black');
@@ -104,7 +101,6 @@ const openPapeleria = (papeleria) => {
         break;
     
         case 'social':
-            console.log('papeleria social');
             papIcons.papSoc.toggleAttribute('hidden')
             papDescriptions.papSocDesc.toggleAttribute('hidden');
             papTitles.papSocTitle.classList.toggle('toggle-txt-color-black');
@@ -119,7 +115,8 @@ const openMenu = () => {
 
 const closeMenu = () => {
     menu.classList.remove('menu-transition');
-} 
+}
+
 
 // SWIPERJS ;
 const swiper = new Swiper(".mySwiper", {
