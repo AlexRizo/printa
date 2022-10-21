@@ -137,7 +137,7 @@ iframe {
 
 .btn-down-icon{
     background: url(../assets/icons/btn_down.png) no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
 }
 
@@ -863,6 +863,7 @@ iframe {
     
     .btn-down-icon {
         background: url(../assets/icons/btn_down_mobile.png) no-repeat;
+        background-position: center center;
     }
 
     .printa-logo-svg-web {
