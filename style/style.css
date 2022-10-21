@@ -29,6 +29,7 @@ iframe {
 }
 
 .header {
+    transition: 0.4s;
     z-index: 10;
     position: fixed;
 }
@@ -156,7 +157,7 @@ iframe {
     text-align: center;
     font-size: 50px;
     font-weight: 700;
-    margin-top: 120px;
+    margin-top: 155px;
     margin-bottom: 40px;
 }
 
@@ -215,7 +216,7 @@ iframe {
 }
 
 .t-services { 
-    margin-top: 120px;
+    margin-top: 175px;
 }
 
 .papeleria-corporativa, .papeleria-publicitaria, 
@@ -330,7 +331,7 @@ iframe {
 }
 
 .t-experience {
-    margin: 120px 0 90px 0
+    margin: 175px 0 90px 0
 }
 
 .centro_medico_colima,
@@ -396,8 +397,8 @@ iframe {
     background-position: center center;
 }
 
-
 .section-5 {
+    margin-top: 175px;
     margin-bottom: 100px;
 }
 
@@ -574,6 +575,11 @@ iframe {
 .menu-transition {
     transition: 0.4s;
     right: 0 !important;
+}
+
+.menu-background-transition {
+    transition: 0.4s;
+    background: black;
 }
 
 /* <!-------- SWIPERJS --------¡> */
@@ -842,6 +848,9 @@ iframe {
 }
 
 @media (max-width: 1100px) {
+    .header {
+        height: 100px;
+    }
 
     .btn-down {
         margin-bottom: 30px;
@@ -860,6 +869,7 @@ iframe {
     }
 
     .whatsapp {
+        bottom: 40px;
         background: url(../assets/icons/WhatsApp_icon_mobile.png) no-repeat;
     }
 
@@ -879,7 +889,7 @@ iframe {
     }
 
     .printa-logo { 
-        padding: 10px 0 0 20px;
+        padding: 10px 0 0 32px;
         position: absolute;
         z-index: 10;
     }
@@ -887,15 +897,15 @@ iframe {
     .btn-menu {
         position: absolute;
         display: initial;
-        right: 40px;
-        top: 45px;
+        right: 35px;
+        top: 40px;
     }
     
     .menu-list {
         position: absolute;
         background: rgba(0, 0, 0, 0.865);
         flex-direction: column;
-        width: 50%;
+        width: auto;
         font-size: 14px;
         letter-spacing: 5px;
         z-index: 10;
@@ -1155,235 +1165,58 @@ iframe {
     }
 }
 
-@media (max-width: 500px) {
-    .printa-logo { 
-        padding: 10px 0 0 20px;
-        position: absolute;
-        z-index: 10;
-    }
-    
+@media (max-width: 600px) {
     .menu-list {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.865);
-        flex-direction: column;
-        width: 50%;
-        font-size: 14px;
-        letter-spacing: 5px;
-        z-index: 10;
-        transition: 1s;
-        top: 0;
-        right: -100%;
-        font-size: 20px;
-        font-weight: 500;
-        letter-spacing: 8px;
-        align-items: flex-end;
-        padding: 40px 0;
-        color: white !important;
-    }
-
-    .underline {
-        display: none;
+        font-size: 15px;
     }
 
     .us, .services, .experience, .contact {
-        margin: 30px 30px;
+        margin: 30px 10px;
+    }
+    
+    .section-1-title{
+        font-size: 34px;
     }
 
-    .section-1-title {
-        text-align: center;
-    }
-
-    .section-1-title div div {
-        display: block;
-    }
-
-    .container-section-2 {
-        flex-direction: column;
-        padding: initial;
-        align-items: center;
+    .title {
+        width: 318px;
     }
 
     .info {
-        width: calc(622px - 200px);
-        height: initial;
-        font-size: 15px;
-        word-spacing: initial;
-    }
-
-    .p1, .p2, .p3, .p4 {
-        margin: 15px 0;
-        line-height: 1.7;
-    }
-
-    .p2 {
-        font-size: 17px;
+        width: 317px;
     }
 
     .img {
-        width: 422px;
-        height: 422px;
+        width: 318px;
+        height: 317px;
     }
 
-    .p-container {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .t-services {
+        width: 318px;
     }
 
     .papeleria-corporativa, .papeleria-publicitaria, 
     .papeleria-administrativa, .papeleria-social {
-        width: 442px;
-        height: 442px;
-        font-size: 27px;
-    }
-
-    .pap-corp, .pap-pub,
-    .pap-adm, .pap-soc, .pap-description{
-        margin: 0 0 10px 0;
-    }
-
-    .pap-corp {
-        width: 144.9px;
-        height: 118.09px;
-    }
-    
-    .pap-pub {
-        width: 87.43px;
-        height: 118.14px;
-    }
-    
-    .pap-adm {
-        width: 90.2px;
-        height: 112.22px;
-    }
-    
-    .pap-soc {
-        width: 91.48px;
-        height: 99.08px;
-    }
-
-    .papeleria-corporativa {
-        background: #05B0E6;
-        order: 1;
-    }
-    
-    .papeleria-publicitaria {
-        background: black;
-        order: 4;
-    }
-    
-    .papeleria-administrativa {
-        background: #FDC71F;
-        order: 3;
-    }
-    
-    .papeleria-social {
-        background: #E5117C;
-        order: 2;
-    }
-
-    .pap-description {
-        font-size: 27px;
+        width: 318px;
+        height: 318px;
     }
     
     .btn {
-        margin-top: 404px;
-        margin-right: 405px;
-        width: 37px;
-        height: 37px;
+        margin-top: 280px;
+        margin-right: 282px;
+    }
+
+    .section-5 {
+        margin-bottom: 30px;
     }
 
     .container-section-4, 
     .container-section-5,
     .container-section-6 {
-        max-width: 442px;
+        max-width: 318px;
     }
 
-    .container-section-5 {
-        flex-direction: column;
-    }
-
-    .contact-data-section,
-    .contact-map-section {
-        width: 100%;
-    }
-
-    .contact-data-section {
-        height: 450px;
-        order: 1;
-    }
-
-    .contact-map-section {
-        order: 2;
-    }
-
-    .contact-data {
-        width: 80%;
-        margin-top: 0;
-        margin-bottom: 10px;
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .t-contact {
-        display: none;
-    }
-    
-    .contact-list {
-        font-size: 15px;
-        margin-top: 0;
-    }
-    
-    .li-tel {
-        margin: 40px 0;
-    }
-    
-    .li-whatsapp {
-        margin: 40px 0;
-    }
-    
-    .li-mail {
-        margin: 40px 0 30px 0;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-        
-    .li-mail img {
-        position: absolute;
-    }
-
-    .li-mail a, .li-mail p {
-        margin-left: 32px;
-    }
-    
-    .li-address {
-        margin: 30px 0 0 0;
-        line-height: 2;
-    }
-
-    .li-address img {
-        margin-top: 5px;
-    }
-
-    .br {
-        display: none;
-    }
-    
-    iframe {
-        height: 349px
-    }
-
-    .container-section-6 {
-        flex-direction: column;
-    }
-
-    .facebook, .instagram {
-        width: 100%;
-    }
-
-    .footer-menu {
-        display: none;
+    .section-6 {
+        margin-bottom: 45px;
     }
 }

@@ -1,5 +1,4 @@
 // Referencias HTML;
-const btnMenu = document.querySelectorAll('.stroke');
 
 const papCorpTitle = document.querySelector('.p-pap-corp');
 const papPubTitle = document.querySelector('.p-pap-pub');
@@ -22,9 +21,7 @@ const papPubDesc = document.querySelector('.pap-desc-pub');
 const papAdmDesc = document.querySelector('.pap-desc-adm');
 const papSocDesc = document.querySelector('.pap-desc-soc');
 
-const menu = document.getElementById('menu');
-
-const printaLogo = document.querySelectorAll('.icon-fill');
+const menu = document.getElementById('header');
 
 const papIcons = {
     papCor,
@@ -57,26 +54,15 @@ const papTitles = {
 window.onscroll = () => {
     const y = window.scrollY;
     closeMenu();
+    console.log(y);
 
-    if (y < 1080) {
-        menu.style.transition = '0.2s';
-        menu.style.color = 'white';
-        removeClasses(btnMenu, 'transition-stroke-black')
-        addClasses(btnMenu, 'transition-stroke-white')
-        addClasses(printaLogo, 'transition-white');
+    if (y < 100) {
+        menu.classList.remove('menu-background-transition');
     }
     
-    if (y >= 1080) {
-        menu.style.transition = '0.2s';
-        menu.style.color = 'black';
-        removeClasses(printaLogo, 'transition-white')
-        removeClasses(btnMenu, 'transition-stroke-white')
-        addClasses(printaLogo, 'transition-black');
-        addClasses(btnMenu, 'transition-stroke-black')
-
-
+    if (y >= 100) {
+        menu.classList.add('menu-background-transition');
     }
-
 };
 
 const addClasses = (elements, className) => {
