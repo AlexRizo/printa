@@ -24,23 +24,7 @@ const papSocDesc = document.querySelector('.pap-desc-soc');
 
 const menu = document.getElementById('menu');
 
-const trazo3 = document.getElementById('Trazado_3');
-const trazo4 = document.getElementById('Trazado_4');
-const trazo5 = document.getElementById('Trazado_5');
-const rect6 = document.getElementById('Rectangulo_6');
-const trazo6 = document.getElementById('Trazado_6');
-const rect7 = document.getElementById('Rectangulo_7');
-const trazo7 = document.getElementById('Trazado_7');
-
-const iconElements = [
-    trazo3,
-    trazo4,
-    trazo5,
-    rect6,
-    trazo6,
-    rect7,
-    trazo7,
-]
+const printaLogo = document.querySelectorAll('.icon-fill');
 
 const papIcons = {
     papCor,
@@ -79,15 +63,15 @@ window.onscroll = () => {
         menu.style.color = 'white';
         removeClasses(btnMenu, 'transition-stroke-black')
         addClasses(btnMenu, 'transition-stroke-white')
-        addClasses(iconElements, 'transition-white');
+        addClasses(printaLogo, 'transition-white');
     }
     
     if (y >= 1080) {
         menu.style.transition = '0.2s';
         menu.style.color = 'black';
-        removeClasses(iconElements, 'transition-white')
+        removeClasses(printaLogo, 'transition-white')
         removeClasses(btnMenu, 'transition-stroke-white')
-        addClasses(iconElements, 'transition-black');
+        addClasses(printaLogo, 'transition-black');
         addClasses(btnMenu, 'transition-stroke-black')
 
 
