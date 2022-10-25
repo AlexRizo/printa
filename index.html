@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/earth.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap" rel="stylesheet">
@@ -85,7 +85,7 @@
                     <div>Tu <div>imprenta</div> de confianza</div>
                     <div class="section-1-footer">
                         <a href="#nosotros" class="btn-down btn-down-icon"></a>
-                        <span class="brand"></span>                   
+                        <span class="brand"></span>              
                     </div>
                 </span>
             </div>
@@ -94,13 +94,13 @@
         <section id="nosotros" class="section-2">
             <div class="title">Nosotros</div>
             <div class="object">
-                <svg xmlns="http://www.w3.org/2000/svg" width="139.697" height="206" viewBox="0 0 139.697 206">
-                    <g id="Grupo_7" data-name="Grupo 7" transform="translate(-539.746 -541.793)">
-                      <path id="Trazado_10" data-name="Trazado 10" d="M609.425,670.232l.134-66.977H539.88l-.134,66.977Z" transform="translate(0 8.141)" fill="#e5117c"/>
-                      <rect id="Rectángulo_16" data-name="Rectángulo 16" width="69.885" height="69.618" transform="translate(609.558 678.175)" fill="#fdc71f"/>
-                      <rect id="Rectángulo_17" data-name="Rectángulo 17" width="69.885" height="69.618" transform="translate(609.558 541.793)" fill="#05b0e6"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="119.691" height="176.684" viewBox="0 0 119.691 176.684">
+                    <g id="Grupo_7" data-name="Grupo 7" transform="translate(-539.746 -551.743)">
+                      <path id="Trazado_10" data-name="Trazado 10" d="M599.441,660.635l.115-57.381h-59.7l-.115,57.381Z" transform="translate(0 8.141)" fill="#e5117c"/>
+                      <rect id="Rectángulo_16" data-name="Rectángulo 16" width="59.88" height="59.652" transform="translate(599.556 668.776)" fill="#fdc71f"/>
+                      <rect id="Rectángulo_17" data-name="Rectángulo 17" width="59.88" height="59.652" transform="translate(599.556 551.743)" fill="#05b0e6"/>
                     </g>
-                </svg>                  
+                </svg>                              
             </div>
             <div class="container-section-2">
                 <div class="info">
@@ -130,12 +130,12 @@
         <section id="servicios" class="section-3">
             <div class="title t-services">Servicios</div>
             <div class="p-container">
-                <div class="papeleria-corporativa">
+                <div class="papeleria-corporativa" onclick="openPapeleria('corporativa')">
                     <div class="pap-corp"></div>
                     <p class="p-pap-corp">Papelería <br>corporativa</p>
                     <p hidden class="pap-description pap-desc-corp">Tarjetas,<br> membretes,<br> folders, sobres,<br> etc.</p>
-                    <div class="btn btn-pap-corp" onclick="openPapeleria('corporativa')">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
+                    <div class="btn btn-pap-corp" >
+                        <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
                             <g id="Grupo_95" data-name="Grupo 95" transform="translate(0 0)">
                               <g id="Grupo_94" data-name="Grupo 94">
                                 <path id="Trazado_114" data-name="Trazado 114" d="M446.411,2651.938v27.285" transform="translate(-432.77 -2651.938)" fill="none" stroke="#fff" stroke-width="2"/>
@@ -143,15 +143,16 @@
                               </g>
                             </g>
                         </svg>
+                        <i class="fa-solid fa-minus close"></i>
                     </div>
                 </div>
 
-                <div class="papeleria-publicitaria">
+                <div class="papeleria-publicitaria" onclick="openPapeleria('publicitaria')">
                     <div class="pap-pub"></div>
                     <p class="p-pap-pub">Papelería <br>publicitaria</p>
                     <p hidden class="pap-description pap-desc-pub">Volantes, <br>folletos, <br>carteles, <br>menús, <br>etc.</p>
-                    <div class="btn btn-pap-pub" onclick="openPapeleria('publicitaria')">                        
-                        <svg xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
+                    <div class="btn btn-pap-pub" >                        
+                        <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
                             <g id="Grupo_95" data-name="Grupo 95" transform="translate(0 0)">
                             <g id="Grupo_94" data-name="Grupo 94">
                                 <path id="Trazado_114" data-name="Trazado 114" d="M446.411,2651.938v27.285" transform="translate(-432.77 -2651.938)" fill="none" stroke="#fff" stroke-width="2"/>
@@ -159,38 +160,41 @@
                             </g>
                             </g>
                         </svg>
+                        <i class="fa-solid fa-minus close"></i>
                     </div>
                 </div>
 
-                <div class="papeleria-administrativa">
+                <div class="papeleria-administrativa" onclick="openPapeleria('administrativa')">
                     <div class="pap-adm"></div>
                     <p class="p-pap-adm">Papelería <br>administrativa</p>
                     <p hidden class="pap-description pap-desc-adm">Notas, recetarios, bitácoras,<br> enmicados, etc.</p>
-                    <div class="btn btn-pap-adm" onclick="openPapeleria('administrativa')">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
+                    <div class="btn btn-pap-adm" >
+                        <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
                             <g id="Grupo_95" data-name="Grupo 95" transform="translate(0 0)">
                               <g id="Grupo_94" data-name="Grupo 94">
                                 <path id="Trazado_114" data-name="Trazado 114" d="M446.411,2651.938v27.285" transform="translate(-432.77 -2651.938)" fill="none" stroke="#fff" stroke-width="2"/>
                                 <path id="Trazado_115" data-name="Trazado 115" d="M0,0V27.285" transform="translate(27.285 13.641) rotate(90)" fill="none" stroke="#fff" stroke-width="2"/>
                               </g>
                             </g>
-                        </svg>    
+                        </svg>
+                        <i class="fa-solid fa-minus close"></i>
                     </div>
                 </div>
 
-                <div class="papeleria-social">
+                <div class="papeleria-social" onclick="openPapeleria('social')">
                     <div class="pap-soc"></div>
                     <p class="p-pap-soc">Papelería <br>social</p>
                     <p hidden class="pap-description pap-desc-soc">Invitaciones,<br> suajes,<br> etiquetas,<br> postales, etc.</p>
-                    <div class="btn btn-pap-soc" onclick="openPapeleria('social')">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
+                    <div class="btn btn-pap-soc" >
+                        <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="27.285" height="27.285" viewBox="0 0 27.285 27.285">
                             <g id="Grupo_95" data-name="Grupo 95" transform="translate(0 0)">
                               <g id="Grupo_94" data-name="Grupo 94">
                                 <path id="Trazado_114" data-name="Trazado 114" d="M446.411,2651.938v27.285" transform="translate(-432.77 -2651.938)" fill="none" stroke="#fff" stroke-width="2"/>
                                 <path id="Trazado_115" data-name="Trazado 115" d="M0,0V27.285" transform="translate(27.285 13.641) rotate(90)" fill="none" stroke="#fff" stroke-width="2"/>
                               </g>
                             </g>
-                        </svg>                          
+                        </svg>
+                        <i class="fa-solid fa-minus close"></i>                
                     </div>
                 </div>
             </div>
@@ -284,13 +288,13 @@
         <div class="footer-content">
             <div class="printa-icon-footer">
                 <a href="#">
-                    <svg class="printa-logo-svg-web" xmlns="http://www.w3.org/2000/svg" width="144.608" height="144.145" viewBox="0 0 144.608 144.145">
+                    <svg class="printa-logo-svg-web" xmlns="http://www.w3.org/2000/svg" width="126.005" height="125.601" viewBox="0 0 126.005 125.601">
                         <g id="Grupo_124" data-name="Grupo 124" transform="translate(-1025.306 -633.548)">
                           <g id="Grupo_122" data-name="Grupo 122" transform="translate(1025.306 633.548)">
-                            <rect id="Rectángulo_77" data-name="Rectángulo 77" width="23.844" height="48.058" transform="translate(24.161 96.087)" fill="#fff"/>
-                            <path id="Trazado_122" data-name="Trazado 122" d="M1060.856,633.69v24.09l48.529-.142a24.164,24.164,0,0,1,24.23,24.165h0a24.164,24.164,0,0,1-24.1,24.163l-48.659.143V730.2l48.648-.051a48,48,0,0,0,47.954-48v-.6a48,48,0,0,0-48.13-48Z" transform="translate(-1012.851 -633.548)" fill="#fff"/>
-                            <rect id="Rectángulo_78" data-name="Rectángulo 78" width="24.161" height="24.069" transform="translate(23.844 24.257)" fill="#05b0e6"/>
-                            <rect id="Rectángulo_79" data-name="Rectángulo 79" width="24.161" height="24.069" transform="translate(0 72.018)" fill="#e5117c"/>
+                            <rect id="Rectángulo_77" data-name="Rectángulo 77" width="20.777" height="41.875" transform="translate(21.053 83.726)" fill="#fff"/>
+                            <path id="Trazado_122" data-name="Trazado 122" d="M1060.856,633.672v20.991l42.286-.124a21.056,21.056,0,0,1,21.113,21.056h0a21.055,21.055,0,0,1-21,21.055l-42.4.125v20.991l42.39-.045a41.826,41.826,0,0,0,41.785-41.826v-.521a41.826,41.826,0,0,0-41.938-41.826Z" transform="translate(-1019.026 -633.548)" fill="#fff"/>
+                            <rect id="Rectángulo_78" data-name="Rectángulo 78" width="21.053" height="20.973" transform="translate(20.777 21.136)" fill="#05b0e6"/>
+                            <rect id="Rectángulo_79" data-name="Rectángulo 79" width="21.053" height="20.973" transform="translate(0 62.753)" fill="#e5117c"/>
                           </g>
                         </g>
                     </svg>
