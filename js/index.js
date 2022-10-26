@@ -6,101 +6,101 @@ const contact = document.querySelector('.contact')
 
 const underline = document.querySelector('.underline')
 
-underline.style.transition = '1s'
+underline.style.transition = '.5s'
 
 let init = 0;
 
-us.addEventListener('click', () => {
-    click(0)
-})
+// us.addEventListener('click', () => {
+//     click(0)
+// })
 
-services.addEventListener('click', () => {
-    click(1)
-})
+// services.addEventListener('click', () => {
+//     click(1)
+// })
 
-experience.addEventListener('click', () => {
-    click(2)
-})
+// experience.addEventListener('click', () => {
+//     click(2)
+// })
 
-contact.addEventListener('click', () => {
-    click(3)
-})
+// contact.addEventListener('click', () => {
+//     click(3)
+// })
 
-const click = (pos) => {
-    if (init == 0 ) {
-        switch (pos) {
-            case 1:
-                console.log('servicios');
-                underline.style.marginLeft = '264px'
-                break;
-            case 2:
-                console.log('experiencia');
-                underline.style.marginLeft = '528px'
-                break;
-            case 3:
-                console.log('contacto');
-                underline.style.marginLeft = '832px'
-                break;
-            default: break;
-        }
-    }
+// const click = (pos) => {
+//     if (init == 0 ) {
+//         switch (pos) {
+//             case 1:
+//                 console.log('servicios');
+//                 underline.style.marginLeft = '264px'
+//                 break;
+//             case 2:
+//                 console.log('experiencia');
+//                 underline.style.marginLeft = '528px'
+//                 break;
+//             case 3:
+//                 console.log('contacto');
+//                 underline.style.marginLeft = '832px'
+//                 break;
+//             default: break;
+//         }
+//     }
 
-    if (init == 1 ) {
-        switch (pos) {
-            case 0:
-                console.log('nosotros');
-                underline.style.marginLeft = '0px'
-                break;
-            case 2:
-                console.log('experiencia');
-                underline.style.marginLeft = '528px'
-                break;
-            case 3:
-                console.log('contacto');
-                underline.style.marginLeft = '832px'
-                break;
-            default: break;
-        }
-    }
+//     if (init == 1 ) {
+//         switch (pos) {
+//             case 0:
+//                 console.log('nosotros');
+//                 underline.style.marginLeft = '0px'
+//                 break;
+//             case 2:
+//                 console.log('experiencia');
+//                 underline.style.marginLeft = '528px'
+//                 break;
+//             case 3:
+//                 console.log('contacto');
+//                 underline.style.marginLeft = '832px'
+//                 break;
+//             default: break;
+//         }
+//     }
 
-    if (init == 2 ) {
-        switch (pos) {
-            case 0:
-                console.log('nosotros');
-                underline.style.marginLeft = '0px'
-                break;
-            case 1:
-                console.log('servicios');
-                underline.style.marginLeft = '264px'
-                break;
-            case 3:
-                console.log('contacto');
-                underline.style.marginLeft = '832px'
-                break;
-            default: break;
-        }
-    }
+//     if (init == 2 ) {
+//         switch (pos) {
+//             case 0:
+//                 console.log('nosotros');
+//                 underline.style.marginLeft = '0px'
+//                 break;
+//             case 1:
+//                 console.log('servicios');
+//                 underline.style.marginLeft = '264px'
+//                 break;
+//             case 3:
+//                 console.log('contacto');
+//                 underline.style.marginLeft = '832px'
+//                 break;
+//             default: break;
+//         }
+//     }
 
-    if (init == 3 ) {
-        switch (pos) {
-            case 0:
-                console.log('nosotros');
-                underline.style.marginLeft = '0px'
-                break;
-            case 1:
-                console.log('nosotros');
-                underline.style.marginLeft = '264px'
-                break;
-            case 2:
-                console.log('experiencia');
-                underline.style.marginLeft = '528px'
-                break;
-            default: break;
-        }
-    }
+//     if (init == 3 ) {
+//         switch (pos) {
+//             case 0:
+//                 console.log('nosotros');
+//                 underline.style.marginLeft = '0px'
+//                 break;
+//             case 1:
+//                 console.log('nosotros');
+//                 underline.style.marginLeft = '264px'
+//                 break;
+//             case 2:
+//                 console.log('experiencia');
+//                 underline.style.marginLeft = '528px'
+//                 break;
+//             default: break;
+//         }
+//     }
 
-    init = pos;
-}
+//     init = pos;
+// }
 
 const plusIcon = document.querySelectorAll('.plus-icon');
 const minusIcon = document.querySelectorAll('.fa-minus');
@@ -160,7 +160,7 @@ const papTitles = {
 window.onscroll = () => {
     const y = window.scrollY;
     closeMenu();
-    console.log(y);
+    // console.log(y);
 
     if (y < 100) {
         head.classList.remove('menu-background-transition');
@@ -170,22 +170,15 @@ window.onscroll = () => {
         head.classList.add('menu-background-transition');
     }
 
-    switch (y) {
-        case 1330 :
-            underline.style.marginLeft = '0px'
-            break;
-    
-        case 2437 :
-            underline.style.marginLeft = '264px'
-            break;
-        case 3534 :
-            underline.style.marginLeft = '528px'
-            break;
-        case 3955 :
-            underline.style.marginLeft = '832px'
-            break;
-        default:
-            break;
+    if (y < 2000) {
+        underline.style.marginLeft = '0px'
+        console.log('object');
+    } else if (y > 2001 && y < 3000) {
+        underline.style.marginLeft = '264px'
+    } else if (y > 3001 && y < 3700) {
+        underline.style.marginLeft = '528px'
+    } else if (y > 3800) {   
+        underline.style.marginLeft = '832px'
     }
 
 };

@@ -670,6 +670,7 @@ iframe {
         width: calc(622px - 10%);
         font-size: 18px;
         word-spacing: 3px;
+        margin-right: initial;
     }
 
     .p2 {
@@ -679,6 +680,7 @@ iframe {
     .img {
         width: calc(696px - 100px);
         height: calc(696px - 100px);
+        margin-left: initial;
     }
 
     .p-container {
@@ -751,7 +753,7 @@ iframe {
 }
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1490px) {
     .menu {
         padding: 25px 25px;
     }
@@ -1002,6 +1004,7 @@ iframe {
         height: initial;
         font-size: 15px;
         word-spacing: initial;
+        text-align: justify;
     }
 
     .p1, .p2, .p3, .p4 {
