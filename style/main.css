@@ -356,42 +356,34 @@ iframe {
 }
 
 .la_marina {
-    /*  */
     background: url(../assets/icons/la_marina.png);
 }
 
 .altozano {
-    /*  */
     background: url(../assets/icons/altozano.png);
 }
 
 .olivos_gasolineria {
-    /*  */
     background: url(../assets/icons/olivos_gasolineria.png);
 }
 
 .m_logo {
-    /*  */
     background: url(../assets/icons/m_logo.png);
 }
 
 .shikimoto {
-    /*  */
     background: url(../assets/icons/shikimoto.png);
 }
 
 .sequoia {
-    /*  */
     background: url(../assets/icons/sequoia.png);
 }
 
 .unique_spa {
-    /*  */
     background: url(../assets/icons/unique_spa.png);
 }
 
 .yin_yiao {
-    /*  */
     background: url(../assets/icons/yin_yiao.png);
 }
 
@@ -578,7 +570,6 @@ iframe {
 }
 
 /* <!-------- TRANSITIONS --------¡> */
-
 .transition-black {
     transition: 0.2s;
     fill: #000;
@@ -610,7 +601,6 @@ iframe {
 }
 
 /* <!-------- SWIPERJS --------¡> */
-
 .mySwiper {
     max-width: 1632px;
 }
@@ -683,6 +673,10 @@ iframe {
         margin-left: initial;
     }
 
+    .object {
+        margin-top: 539px;
+    }
+    
     .p-container {
         width: 1232px;
     }
@@ -752,8 +746,15 @@ iframe {
     }
 }
 
-
 @media (max-width: 1490px) {
+    .printa-logo-svg-web {
+        display: none;
+    }
+
+    .printa-logo-svg-mobile {
+        display: initial;
+    }
+
     .menu {
         padding: 25px 25px;
     }
@@ -771,6 +772,7 @@ iframe {
         width: calc(622px - 200px);
         font-size: 16px;
         word-spacing: 3px;
+        height: 592px;
     }
 
     .p1, .p2, .p3, .p4 {
@@ -888,14 +890,6 @@ iframe {
     .btn-down-icon {
         background: url(../assets/icons/btn_down_mobile.png) no-repeat;
         background-position: center center;
-    }
-
-    .printa-logo-svg-web {
-        display: none;
-    }
-
-    .printa-logo-svg-mobile {
-        display: initial;
     }
 
     .whatsapp {

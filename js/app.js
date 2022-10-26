@@ -10,98 +10,6 @@ underline.style.transition = '.5s'
 
 let init = 0;
 
-// us.addEventListener('click', () => {
-//     click(0)
-// })
-
-// services.addEventListener('click', () => {
-//     click(1)
-// })
-
-// experience.addEventListener('click', () => {
-//     click(2)
-// })
-
-// contact.addEventListener('click', () => {
-//     click(3)
-// })
-
-// const click = (pos) => {
-//     if (init == 0 ) {
-//         switch (pos) {
-//             case 1:
-//                 console.log('servicios');
-//                 underline.style.marginLeft = '264px'
-//                 break;
-//             case 2:
-//                 console.log('experiencia');
-//                 underline.style.marginLeft = '528px'
-//                 break;
-//             case 3:
-//                 console.log('contacto');
-//                 underline.style.marginLeft = '832px'
-//                 break;
-//             default: break;
-//         }
-//     }
-
-//     if (init == 1 ) {
-//         switch (pos) {
-//             case 0:
-//                 console.log('nosotros');
-//                 underline.style.marginLeft = '0px'
-//                 break;
-//             case 2:
-//                 console.log('experiencia');
-//                 underline.style.marginLeft = '528px'
-//                 break;
-//             case 3:
-//                 console.log('contacto');
-//                 underline.style.marginLeft = '832px'
-//                 break;
-//             default: break;
-//         }
-//     }
-
-//     if (init == 2 ) {
-//         switch (pos) {
-//             case 0:
-//                 console.log('nosotros');
-//                 underline.style.marginLeft = '0px'
-//                 break;
-//             case 1:
-//                 console.log('servicios');
-//                 underline.style.marginLeft = '264px'
-//                 break;
-//             case 3:
-//                 console.log('contacto');
-//                 underline.style.marginLeft = '832px'
-//                 break;
-//             default: break;
-//         }
-//     }
-
-//     if (init == 3 ) {
-//         switch (pos) {
-//             case 0:
-//                 console.log('nosotros');
-//                 underline.style.marginLeft = '0px'
-//                 break;
-//             case 1:
-//                 console.log('nosotros');
-//                 underline.style.marginLeft = '264px'
-//                 break;
-//             case 2:
-//                 console.log('experiencia');
-//                 underline.style.marginLeft = '528px'
-//                 break;
-//             default: break;
-//         }
-//     }
-
-//     init = pos;
-// }
-
 const plusIcon = document.querySelectorAll('.plus-icon');
 const minusIcon = document.querySelectorAll('.fa-minus');
 
@@ -157,10 +65,45 @@ const papTitles = {
     papSocTitle,
 }
 
+const $width = window.innerWidth;
+
+const moveSection = (y = 0, pos1 = '0px', pos2 = '0px', pos3 = '0px', pos4 = '0px') => {
+    if ($width >= 1901) {
+        if (y < 2000) {
+            underline.style.marginLeft = pos1
+        } else if (y > 2001 && y < 3000) {
+            underline.style.marginLeft = pos2
+        } else if (y > 3001 && y < 3600) {
+            underline.style.marginLeft = pos3
+        } else if (y > 3601) {   
+            underline.style.marginLeft = pos4
+        }
+    } else if($width >= 1491) {
+        if (y < 1500) {
+            underline.style.marginLeft = pos1
+        } else if (y > 1501 && y < 2688) {
+            underline.style.marginLeft = pos2
+        } else if (y > 2689 && y < 3279) {
+            underline.style.marginLeft = pos3
+        } else if (y > 3280) {   
+            underline.style.marginLeft = pos4
+        }
+    } else if ($width >= 1101) {
+        if (y < 1500) {
+            underline.style.marginLeft = pos1
+        } else if (y > 1501 && y < 2492) {
+            underline.style.marginLeft = pos2
+        } else if (y > 2493 && y < 2979) {
+            underline.style.marginLeft = pos3
+        } else if (y > 2980) {   
+            underline.style.marginLeft = pos4
+        }
+    }
+}
+
 window.onscroll = () => {
     const y = window.scrollY;
     closeMenu();
-    // console.log(y);
 
     if (y < 100) {
         head.classList.remove('menu-background-transition');
@@ -170,17 +113,13 @@ window.onscroll = () => {
         head.classList.add('menu-background-transition');
     }
 
-    if (y < 2000) {
-        underline.style.marginLeft = '0px'
-        console.log('object');
-    } else if (y > 2001 && y < 3000) {
-        underline.style.marginLeft = '264px'
-    } else if (y > 3001 && y < 3700) {
-        underline.style.marginLeft = '528px'
-    } else if (y > 3800) {   
-        underline.style.marginLeft = '832px'
+    if ($width >= 1901) {
+        moveSection(y, '0px', '264px', '528px', '832px',);
+    } else if ($width >= 1491) {
+        moveSection(y, '0px', '197px', '393px', '621px',);
+    } else if ($width >= 1101) {
+        moveSection(y, '0px', '147px', '294px', '469px',);
     }
-
 };
 
 const addClasses = (elements, className) => {
@@ -247,7 +186,6 @@ const closeMenu = () => {
     menu.classList.remove('menu-transition');
 }
 
-
 // SWIPERJS ;
 const swiper = new Swiper(".mySwiper", {
     slidesPerGroup: 1,
@@ -261,7 +199,7 @@ const swiper = new Swiper(".mySwiper", {
     },
 
     breakpoints: {
-        // when window width is >= 320px
+        // when window width is >= ???px
         320: {
           slidesPerView: 1,
           spaceBetween: 5
@@ -274,7 +212,6 @@ const swiper = new Swiper(".mySwiper", {
             slidesPerView: 4,
             spaceBetween: 5
           },
-        // when window width is >= ???px
         1900: {
           slidesPerView: 5,
           spaceBetween: 5
