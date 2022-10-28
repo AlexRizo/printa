@@ -116,7 +116,6 @@ iframe {
     display: inline;
     color: #05B0E6;
     font-weight: 700;
-    margin: 0 50px;
 }
 
 .section-1-footer {
@@ -142,7 +141,7 @@ iframe {
 }
 
 .brand {
-    background: rgba(255, 255, 255, 0.232);
+    background: rgba(255, 255, 255, 0);
     width: 100%;
     height: 15px;
     bottom: 0;
