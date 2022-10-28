@@ -11,7 +11,7 @@ underline.style.transition = '.5s'
 let init = 0;
 
 const plusIcon = document.querySelectorAll('.plus-icon');
-const minusIcon = document.querySelectorAll('.fa-minus');
+const minusIcon = document.querySelectorAll('.minus');
 
 const papCorpTitle = document.querySelector('.p-pap-corp');
 const papPubTitle = document.querySelector('.p-pap-pub');

@@ -140,13 +140,6 @@ iframe {
     background-position: center center;
 }
 
-.brand {
-    background: rgba(255, 255, 255, 0);
-    width: 100%;
-    height: 15px;
-    bottom: 0;
-}
-
 .section-2 {
     width: 100vw;
     background: #fafafa;
@@ -397,7 +390,9 @@ iframe {
 }
 
 .section-5 {
-    margin-top: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 100px;
 }
 
@@ -405,8 +400,8 @@ iframe {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    max-width: 1644px;
-    margin: auto;
+    width: 1644px;
+    margin-top: 175px;
 }
 
 .contact-map-section,
@@ -514,6 +509,14 @@ iframe {
     background-size: contain;
 }
 
+.face-mob{
+    display: none;
+}
+
+.ins-mob{
+    display: none;
+}
+
 .footer {
     background-color: black;
 }
@@ -525,7 +528,7 @@ iframe {
 }
 
 .printa-icon-footer {
-    padding: 40px 0 10px 0;
+    padding: 40px 0 30px 0;
 }
 
 .footer-menu ul{
@@ -730,6 +733,9 @@ iframe {
         max-width: 1232px;
     }
 
+    .container-section-5{
+        margin-top: 100px;
+    }
 
     .contact-data-section {
         height: calc(699px - 150px);
@@ -952,12 +958,6 @@ iframe {
         margin: 30px 30px;
     }
 
-    .brand {
-        background: rgb(255, 255, 255);
-        position: absolute;
-        bottom: 0px;
-    }
-
     .section-1-title {
         text-align: center;
     }
@@ -979,7 +979,7 @@ iframe {
     }
 
     .t-services, .t-contact-mobile, .t-experience {
-        margin-top: 100px;
+        margin: 100px 0 20px 0;
     }
 
     .section-4 {
@@ -1095,7 +1095,6 @@ iframe {
     }
 
     .section-5 {
-        margin-top: 20px;
         margin-bottom: 30px;
     }
 
@@ -1104,6 +1103,7 @@ iframe {
     }
 
     .container-section-5 {
+        margin-top: 20px;
         flex-direction: column;
     }
 
@@ -1131,7 +1131,7 @@ iframe {
 
     .t-contact-mobile {
         display: initial;
-        margin-top: 75px;
+        margin: 75px 0 20px 0;
     }
 
     .t-contact {
@@ -1192,16 +1192,20 @@ iframe {
         height: 46px;
     }
 
-    .face{
-        width: 12.15px;
-        height: 26.84px;
-        background: url(../assets/icons/facebook_mobile.png) no-repeat center center;
+    .face-desk{
+        display: none;
     }
-    .ins{
-        width: 26px;
-        height: 26px;
-        background: url(../assets/icons/instagram_mobile.png) no-repeat center center;
-        background-size: contain;
+
+    .ins-desk{
+        display: none;
+    }
+
+    .face-mob{
+        display: initial;
+    }
+    
+    .ins-mob{
+        display: initial;
     }
 
     .footer-menu {
