@@ -28,6 +28,17 @@ iframe {
     height: 699px
 }
 
+.whapp-desk {
+    position: absolute;
+    bottom: 0px;
+}
+
+.whapp-mob {
+    position: absolute;
+    bottom: 0px;
+    visibility: hidden;
+}
+
 .header {
     transition: 0.4s;
     z-index: 10;
@@ -45,13 +56,9 @@ iframe {
 
 .whatsapp {
     position: fixed;
-    width: 62.27px;
-    height: 62.27px;
     bottom: 50px;
     left: 25px;
     z-index: 999;
-    background: url(../assets/icons/WhatsApp_icon.png) no-repeat;
-    background-size: contain;
     cursor: pointer;
 }
 
@@ -654,10 +661,6 @@ iframe {
         font-size: 54px;
     }
 
-    .section-1-title div div {
-        margin: 0 25px;
-    }
-
     .info {
         width: calc(622px - 10%);
         font-size: 18px;
@@ -884,6 +887,14 @@ iframe {
 }
 
 @media (max-width: 1100px) {
+    .whapp-desk {
+        visibility: hidden;
+    }
+    .whapp-mob {
+        visibility: visible;
+    }
+
+
     .header {
         height: 100px;
     }
@@ -899,7 +910,6 @@ iframe {
 
     .whatsapp {
         bottom: 40px;
-        background: url(../assets/icons/WhatsApp_icon_mobile.png) no-repeat;
     }
 
     .section-1 {
