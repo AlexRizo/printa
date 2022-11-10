@@ -81,21 +81,21 @@ const moveSection = (y = 0, pos1 = '0px', pos2 = '0px', pos3 = '0px', pos4 = '0p
     } else if($width >= 1491) {
         if (y < 1500) {
             underline.style.marginLeft = pos1
-        } else if (y > 1501 && y < 2688) {
+        } else if (y > 1501 && y < 2255) {
             underline.style.marginLeft = pos2
-        } else if (y > 2689 && y < 3279) {
+        } else if (y > 2256 && y < 2900) {
             underline.style.marginLeft = pos3
-        } else if (y > 3280) {   
+        } else if (y > 2901) {   
             underline.style.marginLeft = pos4
         }
     } else if ($width >= 1101) {
         if (y < 1500) {
             underline.style.marginLeft = pos1
-        } else if (y > 1501 && y < 2492) {
+        } else if (y > 1501 && y < 2255) {
             underline.style.marginLeft = pos2
-        } else if (y > 2493 && y < 2979) {
+        } else if (y > 2256 && y < 2800) {
             underline.style.marginLeft = pos3
-        } else if (y > 2980) {   
+        } else if (y > 2801) {   
             underline.style.marginLeft = pos4
         }
     }
